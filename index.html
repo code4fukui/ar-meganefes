@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>AR meganefes megane</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="info">
+AR meganefes megane with <a href=https://github.com/code4fukui/ar-baseapp/>AR baseapp</a>
+</div>
+
+<script type="importmap">
+{
+	"imports": {
+		"three": "https://code4fukui.github.io/three.js/build/three.module.js",
+		"three/addons/": "https://code4fukui.github.io/three.js/examples/jsm/"
+	}
+}
+</script>
+
+<script type="module">
+import { initAR } from "https://code4fukui.github.io/ar-baseapp/initAR.js";
+import { createMegane } from "./createMegane.js";
+
+const scene = initAR();
+
+scene.add(createMegane(.5));
+
+</script>
+</body>
+</html>
